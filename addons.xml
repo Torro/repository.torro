@@ -1,23 +1,63 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addons>
-
-<addon id="repository.torro" name="Torro's repository" version="1.0.0" provider-name="Torro">
+<addon id="repository.torro" name="Torro's repository" version="1.1.0" provider-name="Torro">
 	<extension point="xbmc.addon.repository" name="Torro's repository">
-		<info>https://raw.githubusercontent.com/torro/repository.torro/master/addons.xml</info>
-		<checksum>https://raw.githubusercontent.com/torro/repository.torro/master/addons.xml.md5</checksum>
-		<datadir>https://raw.githubusercontent.com/torro/repository.torro/master/</datadir>
+		<info>https://Torro.github.io/repo/addons.xml</info>
+		<checksum>https://Torro.github.io/repo/addons.xml.md5</checksum>
+		<datadir>https://Torro.github.io/repo/</datadir>
 	</extension>
 	<extension point="xbmc.addon.metadata">
 		<summary>Torro's repository</summary>
 		<description>A repository hosting Torro's Kodi addons</description>
 		<platform>all</platform>
 		<news>
-v1.0.0 (2017-12-23)
-- Initial version
+v1.1.0
+- added plugin.video.eptv
+
+v1.0.0
+- initial version
 		</news>
 	</extension>
 </addon>
+<addon id="plugin.video.eptv" name="EPTV" version="0.1.0-alpha" provider-name="Torro">
+	<requires>
+		<import addon="xbmc.python"                 version="2.1.0"/>
+		<import addon="script.module.beautifulsoup" version="4.5.3"/>
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="alpha.py">
+		<provides>video</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="nl">Watch EuroparlTV</summary>
+		<description lang="nl">Watch EuroparlTV</description>
+		<news>
+v0.1.0-alpha:
+  * watch livestreams
+  * view the schedule
+</news>
+		<platform>all</platform>
+		<language>English</language>
+		<license>GPLv3+</license>
+		<forum></forum>
+		<website></website>
+		<email></email>
+		<source></source>
+		<disclaimer>Copyright (C) 2017 Torro.
 
+		This program is free software: you can redistribute it and/or modify
+		it under the terms of the GNU General Public License as published by
+		the Free Software Foundation, either version 3 of the License, or
+		(at your option) any later version.
+
+		This program is distributed in the hope that it will be useful,
+		but WITHOUT ANY WARRANTY; without even the implied warranty of
+		MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+		GNU General Public License for more details.
+
+		You should have received a copy of the GNU General Public License
+		along with this program. If not, see http://www.gnu.org/licenses/</disclaimer>
+	</extension>
+</addon>
 <addon id="plugin.video.kdglive" name="KDG Live" version="1.1.2" provider-name="Torro">
 	<requires>
 		<import addon="xbmc.python"                 version="2.1.0"/>
@@ -76,5 +116,4 @@ v1.0.0-beta
 		along with this program. If not, see http://www.gnu.org/licenses/</disclaimer>
 	</extension>
 </addon>
-
 </addons>
